@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Swayam | AI agents that check their own work</title>
+  <meta name="description" content="Portfolio of Swayam: AI agents on AWS that check their answers by running code. Projects: proofset, Escalator and run_python.">
+  <meta property="og:title" content="Swayam | AI agents that check their own work">
+  <meta property="og:description" content="Projects, skills, and a game: can you catch the AI getting maths wrong?">
+  <meta property="og:image" content="assets/escalator.webp">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/InterVariable.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip" href="#about">Skip to content</a>
+
+  <header class="nav">
+    <div class="wrap nav-inner">
+      <a class="brand" href="#top">Swayam</a>
+      <nav aria-label="Sections">
+        <a href="#about">About</a>
+        <a href="#superpowers">Superpowers</a>
+        <a href="#projects">Projects</a>
+        <a href="#achievements">Achievements</a>
+        <a href="#contact">Contact</a>
+        <button class="nav-game" type="button" data-open-game>Catch the AI</button>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- Hero ---------------------------------------------------------------------------------------->
+    <section class="hero wrap">
+      <div class="hero-text">
+      <p class="eyebrow">Student builder · AI agents on AWS</p>
+      <h1>I build AI agents that check their own work.</h1>
+      <p class="lede">Language models write confident answers, and some of them are wrong. My projects make the
+        model run code to prove a number before anyone relies on it, and I measure every claim against real answers.</p>
+      <div class="hero-actions">
+        <a class="btn primary" href="#projects">See my projects</a>
+        <button class="btn hint" type="button" data-open-game>
+          <span aria-hidden="true">🔍</span> Can you catch the AI?
+        </button>
+      </div>
+      <p class="hint-note">Psst: there's a game on this page. The AI gets some maths wrong, and you get to catch it.</p>
+      </div>
+      <aside class="teaser" aria-label="A question from the game">
+        <p class="teaser-label">Claude Haiku 4.5 said</p>
+        <p class="teaser-q">48,917 × 7,382 =</p>
+        <p class="teaser-a">361,055,594</p>
+        <p class="teaser-ask">Right or wrong?</p>
+        <button class="btn primary" type="button" data-open-game data-first="0">Run the code to find out</button>
+      </aside>
+    </section>
+
+    <!-- About --------------------------------------------------------------------------------------->
+    <section id="about" class="wrap section">
+      <h2>About me</h2>
+      <div class="about">
+        <div class="about-text">
+          <p>Hi, I'm Swayam. TODO: one sentence on where you study and what (school, programme, year).</p>
+          <p>I got into AI agents through AWS hackathons. My first one asked for an agent that decides when it
+            needs a bigger model. I built it, measured it, and found it confidently sent wrong maths answers.
+            Every project since has been about the same question: how do you know an AI's answer is right?</p>
+          <p>My answer so far: don't ask another model to judge, run the code. That idea took me from a router
+            that saves money, to a Python sandbox on AWS Lambda, to proofset, which writes school practice sets
+            and won't ship an answer key unless two runs of code agree with it.</p>
+          <p>TODO: one or two sentences in your own words: what you enjoy, what you want to do next, anything
+            personal (a hobby, where you're from, a language you speak).</p>
+        </div>
+        <ul class="facts" aria-label="Quick facts">
+          <li><span>Studying</span>TODO: school, programme</li>
+          <li><span>Based in</span>TODO: city, country</li>
+          <li><span>Building with</span>Python, Strands Agents, Amazon Bedrock, AWS Lambda</li>
+          <li><span>Languages</span>TODO: e.g. English, German</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Superpowers --------------------------------------------------------------------------------->
+    <section id="superpowers" class="wrap section">
+      <h2>Tech superpowers</h2>
+      <p class="section-lede">Each one links to where I used it, so you don't have to take my word for it.</p>
+      <div class="cards three">
+        <article class="card">
+          <h3>AI agents</h3>
+          <p>Strands Agents SDK: tools, structured output, hooks, agents working in parallel. Models on Amazon
+            Bedrock (Claude Haiku 4.5, Amazon Nova Micro).</p>
+          <a href="https://github.com/Swayam-Ch/proofset">Used in proofset →</a>
+        </article>
+        <article class="card">
+          <h3>Making AI checkable</h3>
+          <p>Answers verified by running code, two independent solvers, a tie-breaker from another model
+            family, and plain-Python checks where a model would guess.</p>
+          <a href="https://github.com/Swayam-Ch/escalator/tree/verify-code">Used in Escalator's verify mode →</a>
+        </article>
+        <article class="card">
+          <h3>Measuring honestly</h3>
+          <p>Benchmarks against real answers, repeated runs with ranges, and write-ups that report what
+            failed. My benchmarks found bugs in my own code, and I kept those in the results.</p>
+          <a href="https://github.com/Swayam-Ch/proofset#results">See the results →</a>
+        </article>
+        <article class="card">
+          <h3>AWS</h3>
+          <p>Amazon Bedrock, AWS Lambda (a sandbox with a logs-only IAM role), IAM, CloudWatch Logs, and AWS
+            Amplify Hosting for this site.</p>
+          <a href="https://github.com/Swayam-Ch/escalator/tree/run-python-tool">Lambda sandbox code →</a>
+        </article>
+        <article class="card">
+          <h3>Python</h3>
+          <p>Agents, benchmarks, data parsing (OpenStax CNXML and MathML), pytest suites that run without
+            AWS, and charts with matplotlib.</p>
+          <a href="https://github.com/Swayam-Ch/proofset/tree/main/tests">Tests →</a>
+        </article>
+        <article class="card">
+          <h3>Explaining it</h3>
+          <p>Demo videos, Builder Center articles and READMEs that a teacher or a judge can follow, in plain
+            language.</p>
+          <a href="https://youtu.be/3geFHbr-2kY">A demo video →</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- Projects ------------------------------------------------------------------------------------>
+    <section id="projects" class="wrap section">
+      <h2>Projects</h2>
+
+      <article class="project">
+        <img src="assets/proofset.webp" alt="proofset cover: 0 of 31 wrong answer keys reached a worksheet, next to a German practice worksheet" width="1200" height="675" loading="lazy">
+        <div>
+          <p class="tag">Education · Strands SDK: Workshop to Ship</p>
+          <h3>proofset</h3>
+          <p>Turns a chapter of a free OpenStax textbook into maths practice in English and German: printable
+            worksheets and a tutor students can talk to. An author agent writes the problems, two solver agents
+            work each one out in an AWS Lambda sandbox, and a key ships only if two code runs agree with it.</p>
+          <ul class="stats">
+            <li><b>0 of 31</b> wrong answer keys reached a worksheet</li>
+            <li><b>327</b> keys checked against the textbook's answers</li>
+            <li><b>~0.1¢</b> per student for a 10-problem worksheet</li>
+          </ul>
+          <p class="links"><a href="https://github.com/Swayam-Ch/proofset">Code</a></p>
+        </div>
+      </article>
+
+      <article class="project">
+        <img src="assets/escalator.webp" alt="Escalator results: Nova Micro with a Python sandbox went from 2 to 14 correct out of 18" width="1200" height="627" loading="lazy">
+        <div>
+          <p class="tag">Strands Decider hackathon · Weekend Challenge: Give your Agent a Tool</p>
+          <h3>Escalator, run_python and verify mode</h3>
+          <p>A 2B decision model routes each question to a cheap or an expensive model. I then gave the agent
+            one tool, a Python sandbox on AWS Lambda, and later a verify mode that keeps the cheap model's
+            answer only when two runs of its code agree.</p>
+          <ul class="stats">
+            <li><b>2 → 14</b> of 18 correct for Nova Micro with the sandbox</li>
+            <li><b>18 of 18</b> for Claude Haiku with it, 11 without</li>
+            <li><b>48%</b> of the cost in verify mode, no wrong answers kept</li>
+          </ul>
+          <p class="links">
+            <a href="https://github.com/Swayam-Ch/escalator">Code</a>
+            <a href="https://youtu.be/3geFHbr-2kY">run_python video</a>
+            <a href="https://youtu.be/PtXiIiXiwM4">Escalator video</a>
+          </p>
+        </div>
+      </article>
+
+      <figure class="gallery">
+        <img src="assets/proofset-results.webp" alt="Chart: wrong answer keys written by Claude Haiku in three runs (11, 11, 9) against wrong keys shipped after proofset's check (0, 0, 0)" loading="lazy">
+        <img src="assets/verify-mode.webp" alt="Chart: verify mode costs 2.7 cents per run against 5.6 cents for Claude Haiku with the sandbox" loading="lazy">
+        <figcaption>Results from my benchmarks: every number comes from a run you can repeat from the repos.</figcaption>
+      </figure>
+    </section>
+
+    <!-- Achievements -------------------------------------------------------------------------------->
+    <section id="achievements" class="wrap section">
+      <h2>Achievements</h2>
+      <ol class="timeline">
+        <li><span>Nov 2026</span><b>proofset</b> submitted to <i>Strands SDK: Workshop to Ship</i> (Education).</li>
+        <li><span>Oct 2026</span><b>Escalator + run_python</b> submitted to <i>Weekend Challenge: Give your Agent a Tool</i>.</li>
+        <li><span>Oct 2026</span><b>Escalator</b> submitted to the <i>Strands Decider 2B</i> hackathon, with a Builder Center article.</li>
+        <li><span>2026</span>TODO: anything else (courses, certificates, school projects, awards). Delete this line if none.</li>
+      </ol>
+    </section>
+
+    <!-- Contact ------------------------------------------------------------------------------------->
+    <section id="contact" class="wrap section">
+      <h2>Contact</h2>
+      <p class="section-lede">I'm looking for TODO: internships / research / collaborators. The best way to reach me:</p>
+      <p class="contact-links">
+        <a class="btn" href="https://github.com/Swayam-Ch">GitHub</a>
+        <a class="btn" href="TODO-linkedin-url">LinkedIn</a>
+        <a class="btn" href="TODO-builder-center-profile-url">AWS Builder Center</a>
+      </p>
+    </section>
+  </main>
+
+  <footer class="wrap footer">
+    <p>Hosted on AWS Amplify Hosting. Built by hand with HTML, CSS and JavaScript, no framework.
+      <a href="https://github.com/Swayam-Ch/portfolio">Source</a></p>
+  </footer>
+
+  <!-- The creative feature: Catch the AI ------------------------------------------------------------->
+  <button class="fab" type="button" data-open-game aria-label="Play Catch the AI">🔍 Catch the AI</button>
+
+  <dialog id="game" aria-labelledby="game-title">
+    <div class="game">
+      <div class="game-head">
+        <h2 id="game-title">Catch the AI</h2>
+        <button class="close" type="button" data-close-game aria-label="Close the game">✕</button>
+      </div>
+      <div id="game-body"></div>
+    </div>
+  </dialog>
+
+  <script src="game.js" defer></script>
+</body>
+</html>
