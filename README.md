@@ -13,8 +13,8 @@ benchmark, with no tools. They guess whether it's right, then run the code that 
 runs right in the browser. Six of the ten questions have a wrong AI answer, four a right one, and
 each game picks five at random.
 
-It's the idea behind all my projects as a 30-second game: a language model sounds sure, and the
-only way to know is to run the code.
+It's the idea behind all my projects as a 30-second game: a language model sounds sure, and
+running the code shows whether it's right.
 
 - The questions and AI answers come from the
   [Escalator benchmark](https://github.com/Swayam-Ch/escalator/tree/run-python-tool) (`bench/calc_questions.jsonl`).

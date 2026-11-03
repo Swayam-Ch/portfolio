@@ -96,7 +96,7 @@ function intro() {
       "These are real answers Claude Haiku 4.5 gave in my benchmark, with no tools. Some are right, some are wrong. ",
       "Guess which, then run the code to find out."),
     el("p", {class: "game-why"},
-      "Why this game? Every project I build is about this moment: an AI sounds sure, and the only way to know is to run the code."),
+      "Every project I build comes back to this moment: an AI sounds sure, and running the code shows whether it's right."),
     el("button", {class: "btn primary", type: "button", onclick: showRound}, `Start (${PER_GAME} questions)`),
   );
   body.querySelector("button").focus();
@@ -153,7 +153,7 @@ function finish() {
     el("p", {class: "score"}, `${correctCalls} / ${rounds.length}`),
     el("p", {class: "score-line"}, line),
     el("p", {class: "game-lede"},
-      "My agents play this game at scale. In proofset, Claude Haiku wrote 31 wrong answer keys over three runs, and code caught every one before it reached a worksheet."),
+      "My agents check AI answers the same way. In proofset, Claude Haiku wrote 31 wrong answer keys over three runs, and code caught every one before it reached a worksheet."),
     el("div", {class: "choices"},
       el("button", {class: "btn primary", type: "button", onclick: () => start()}, "Play again"),
       el("a", {class: "btn", href: "#projects", onclick: close}, "See the projects"),
