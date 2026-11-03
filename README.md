@@ -2,7 +2,7 @@
 
 My portfolio site: about me, skills, projects, and one game. Hosted on AWS Amplify Hosting.
 
-Live: TODO-amplify-url
+Live: https://main.d19m42yv0uwefa.amplifyapp.com
 
 ## The creative feature: Catch the AI
 
